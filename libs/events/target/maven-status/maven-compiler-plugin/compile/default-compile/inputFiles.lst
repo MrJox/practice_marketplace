@@ -1,1 +1,6 @@
-D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\App.java
+D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\EventEnvelope.java
+D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\IDomainEvent.java
+D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\product\EventProductCreated.java
+D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\product\EventProductDeleted.java
+D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\user\EventUserCreated.java
+D:\java\projects\marketplace\marketplace-parent\libs\events\src\main\java\com\marketplace\user\EventUserDisabled.java

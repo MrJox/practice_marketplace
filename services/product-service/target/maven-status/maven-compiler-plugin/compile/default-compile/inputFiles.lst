@@ -1,1 +1,10 @@
-D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\App.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\controller\ProductController.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\dto\CreateProductRequest.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\dto\CreateProductResponse.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\dto\ProductDto.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\entity\Product.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\mapper\ProductMapper.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\ProductsServiceApp.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\repository\ProductRepository.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\service\ProductService.java
+D:\java\projects\marketplace\marketplace-parent\services\product-service\src\main\java\com\marketplace\service\ProductServiceImpl.java

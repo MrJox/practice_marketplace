@@ -1,1 +1,6 @@
-com\marketplace\App.class
+com\marketplace\EventEnvelope.class
+com\marketplace\IDomainEvent.class
+com\marketplace\product\EventProductDeleted.class
+com\marketplace\user\EventUserCreated.class
+com\marketplace\user\EventUserDisabled.class
+com\marketplace\product\EventProductCreated.class

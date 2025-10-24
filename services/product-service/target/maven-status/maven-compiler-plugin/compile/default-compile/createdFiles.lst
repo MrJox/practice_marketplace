@@ -1,1 +1,9 @@
-com\marketplace\App.class
+com\marketplace\service\ProductService.class
+com\marketplace\dto\CreateProductResponse.class
+com\marketplace\entity\Product.class
+com\marketplace\ProductsServiceApp.class
+com\marketplace\dto\ProductDto.class
+com\marketplace\controller\ProductController.class
+com\marketplace\repository\ProductRepository.class
+com\marketplace\dto\CreateProductRequest.class
+com\marketplace\mapper\ProductMapper.class
