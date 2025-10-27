@@ -2,14 +2,15 @@ package com.marketplace.mapper;
 
 import com.marketplace.dto.ProductDto;
 import com.marketplace.entity.Product;
+import com.marketplace.entity.ProductAvailabilityStatus;
 import java.math.BigDecimal;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-10-24T18:14:52+0200",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.8 (JetBrains s.r.o.)"
+    date = "2025-10-27T14:24:24+0100",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 25 (Eclipse Adoptium)"
 )
 @Component
 public class ProductMapperImpl implements ProductMapper {
@@ -23,7 +24,9 @@ public class ProductMapperImpl implements ProductMapper {
         Product product = new Product();
 
         product.setName( dto.name() );
+        product.setDescription( dto.description() );
         product.setPrice( dto.price() );
+        product.setStatus( dto.status() );
 
         product.setCreatedAt( java.time.LocalDateTime.now() );
 
@@ -37,12 +40,16 @@ public class ProductMapperImpl implements ProductMapper {
         }
 
         String name = null;
+        String description = null;
         BigDecimal price = null;
+        ProductAvailabilityStatus status = null;
 
         name = product.getName();
+        description = product.getDescription();
         price = product.getPrice();
+        status = product.getStatus();
 
-        ProductDto productDto = new ProductDto( name, price );
+        ProductDto productDto = new ProductDto( name, description, price, status );
 
         return productDto;
     }

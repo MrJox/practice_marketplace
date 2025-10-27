@@ -1,9 +1,13 @@
+com\marketplace\components\ProductSpecificationBuilder.class
 com\marketplace\service\ProductService.class
-com\marketplace\dto\CreateProductResponse.class
-com\marketplace\entity\Product.class
 com\marketplace\ProductsServiceApp.class
 com\marketplace\dto\ProductDto.class
+com\marketplace\service\ProductServiceImpl.class
+com\marketplace\entity\Product_.class
+com\marketplace\mapper\ProductMapperImpl.class
 com\marketplace\controller\ProductController.class
-com\marketplace\repository\ProductRepository.class
-com\marketplace\dto\CreateProductRequest.class
+com\marketplace\entity\ProductAvailabilityStatus.class
 com\marketplace\mapper\ProductMapper.class
+com\marketplace\entity\Product.class
+com\marketplace\dto\ProductFilterDto.class
+com\marketplace\repository\ProductRepository.class
