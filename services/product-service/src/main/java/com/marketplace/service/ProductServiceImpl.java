@@ -45,4 +45,12 @@ public class ProductServiceImpl implements ProductService {
         Product savedProduct = repository.save(product);
         return mapper.toDto(savedProduct);
     }
+
+    @Override
+    public void deleteProduct(Long productId) {
+        Product product = repository.findById(productId)
+                .orElseThrow(() -> new NotFoundException("Product", productId));
+
+        repository.delete(product);
+    }
 }

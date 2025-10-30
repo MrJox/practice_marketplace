@@ -12,4 +12,5 @@ public interface ProductService {
     Page<ProductDto> getProductsFiltered(ProductFilterDto filterDto, Pageable pageable);
     ProductDto getProductById(Long productId);
     ProductDto createProduct(ProductDto dto);
+    void deleteProduct(Long productId);
 }
