@@ -1,7 +1,6 @@
 package com.marketplace.controller;
 
-import com.marketplace.dto.ProductDto;
-import com.marketplace.dto.ProductFilterDto;
+import com.marketplace.dto.*;
 import com.marketplace.entity.Product;
 import com.marketplace.entity.ProductAvailabilityStatus;
 import com.marketplace.service.ProductService;
@@ -54,20 +53,20 @@ public class ProductController {
     }
 
     @PatchMapping("/{productId}/description")
-    public ResponseEntity<ProductDto> updateProductDescription(@PathVariable("productId") Long productId, @RequestBody String description) {
-        ProductDto dto = service.updateDescription(productId, description);
-        return ResponseEntity.status(HttpStatus.OK).body(dto);
+    public ResponseEntity<ProductDto> updateProductDescription(@PathVariable("productId") Long productId, @RequestBody ProductDto requestDto) {
+        ProductDto productDto = service.updateDescription(productId, requestDto.description());
+        return ResponseEntity.status(HttpStatus.OK).body(productDto);
     }
 
     @PatchMapping("/{productId}/price")
-    public ResponseEntity<ProductDto> updateProductPrice(@PathVariable("productId") Long productId, @RequestBody BigDecimal price) {
-        ProductDto dto = service.updatePrice(productId, price);
-        return ResponseEntity.status(HttpStatus.OK).body(dto);
+    public ResponseEntity<ProductDto> updateProductPrice(@PathVariable("productId") Long productId, @RequestBody ProductDto requestDto) {
+        ProductDto productDto = service.updatePrice(productId, requestDto.price());
+        return ResponseEntity.status(HttpStatus.OK).body(productDto);
     }
 
     @PatchMapping("/{productId}/status")
-    public ResponseEntity<ProductDto> updateProductStatus(@PathVariable("productId") Long productId, @RequestBody ProductAvailabilityStatus status) {
-        ProductDto dto = service.updateAvailabilityStatus(productId, status);
+    public ResponseEntity<ProductDto> updateProductStatus(@PathVariable("productId") Long productId, @RequestBody ProductDto requestDto) {
+        ProductDto dto = service.updateAvailabilityStatus(productId, requestDto.status());
         return ResponseEntity.status(HttpStatus.OK).body(dto);
     }
 }
