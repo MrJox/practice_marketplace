@@ -8,6 +8,8 @@ import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 
 public record ProductDto(
+        Long id,
+
         @NotBlank(message = "Product Name should not be empty.")
         @Size(min = 2, max = 255, message = "Name should be between 2 and 255 characters")
         String name,

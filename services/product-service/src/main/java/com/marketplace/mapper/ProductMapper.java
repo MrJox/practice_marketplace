@@ -12,6 +12,7 @@ public interface ProductMapper {
     @Mapping(target = "createdAt", expression = "java(java.time.LocalDateTime.now())")
     Product toEntity(ProductDto dto);
 
+    @Mapping(target = "id", source = "productId")
     ProductDto toDto(Product product);
 
     @Mapping(target = "productId", ignore = true)
