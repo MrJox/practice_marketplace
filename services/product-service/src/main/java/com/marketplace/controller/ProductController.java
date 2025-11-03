@@ -1,9 +1,8 @@
 package com.marketplace.controller;
 
 import com.marketplace.dto.*;
-import com.marketplace.entity.Product;
-import com.marketplace.entity.ProductAvailabilityStatus;
 import com.marketplace.service.ProductService;
+import com.marketplace.util.UriUtil;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
+import java.net.URI;
 
 @RestController
 @RequestMapping("api/v1/products")
@@ -37,7 +36,9 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto productDto) {
         ProductDto dto = service.createProduct(productDto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(dto);
+
+        URI location = UriUtil.buildResourceUri(dto.id());
+        return ResponseEntity.created(location).body(dto);
     }
 
     @DeleteMapping("/{productId}")
